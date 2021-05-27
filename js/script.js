@@ -12,10 +12,10 @@ function doMathClicked () {
   const userAge = parseInt(document.getElementById('user-age').value)
 	const userDay = document.getElementById('user-day').value
 
-  if ((userAge > 12 && userAge < 21) || (userDay == "Tuesday" || userDay == "Thursday")) {
-		document.getElementById('answer').innerHTML = "You are eligible for student pricing!";
-	} else if (userAge < 5 || userAge > 95) {
+  if (userAge < 5 || userAge > 95) {
 		document.getElementById('answer').innerHTML = "You have free admission :)";
+	} else if ((userAge > 12 && userAge < 21) || (userDay == "Tuesday" || userDay == "Thursday")) {
+		document.getElementById('answer').innerHTML = "You are eligible for student pricing!";
 	} else {
 		document.getElementById('answer').innerHTML = "You must pay regular pricing.";
 	}
